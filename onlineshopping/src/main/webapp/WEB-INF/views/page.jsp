@@ -95,7 +95,7 @@
 
 		<!-- load only when user clicks show products-->
 			<c:if test="${userClickShowProduct == true }">
-				
+				<%@include file="singleProduct.jsp"%>
 				
 			</c:if>
 			
