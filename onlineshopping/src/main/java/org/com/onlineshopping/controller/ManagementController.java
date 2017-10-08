@@ -172,7 +172,7 @@ public class ManagementController {
 	
 	
 	
-	//returing categories for all the request mapping
+	//returning categories for all the request mapping
 	@ModelAttribute("categories")
 	public List<Category> getCategories() {
 		
