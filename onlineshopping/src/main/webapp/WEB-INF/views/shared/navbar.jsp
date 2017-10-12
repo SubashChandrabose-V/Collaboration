@@ -30,15 +30,15 @@
                     
                     <security:authorize access="hasAuthority('ADMIN')"> 
                     <li id="manageProducts">
-                        <a href="${contextRoot}/manage/products">Manage Products</a>
+                        <a href="${contextRoot}/manage/product">Manage Products</a>
                     </li>
                     </security:authorize>
                 </ul>
                 
                 <ul class="nav navbar-nav navbar-right">
                 <security:authorize access="isAnonymous()">
-                 <li id="register">
-                        <a href="${contextRoot}/register">Sign up</a>
+                 <li id="signup">
+                        <a href="${contextRoot}/membership">Sign up</a>
                     </li>
                     
                     <li id="login">
@@ -70,7 +70,7 @@
 								<li class="divider" role="separator"></li>
                     	</security:authorize>
                     	<li>
-                    		<a href="${contextRoot}/perform-logout">Logout</a>
+                    		<a href="${contextRoot}/logout">Logout</a>
                     	</li>
                     
                     </ul>

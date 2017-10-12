@@ -11,21 +11,19 @@
 	<properties>
 		<javaee.version>7.0</javaee.version>
 		<spring.version>4.3.6.RELEASE</spring.version>
-	<spring.security.version>4.2.2.RELEASE</spring.security.version>
+		<spring.security.version>4.2.2.RELEASE</spring.security.version>
 	</properties>
 	<dependencies>
 
-	<!-- Link dependency backEnd -->
-	
-	<dependency>
-	<groupId>org.com</groupId>
-	<artifactId>shoppingbackend</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	
-	</dependency>	
+		<!-- Link dependency backEnd -->
 
+		<dependency>
+			<groupId>org.com</groupId>
+			<artifactId>shoppingbackend</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
 
-		<!-- https://mvnrepository.com/artifact/javax/javaee-api -->
+		</dependency>
+
 		<dependency>
 			<groupId>javax</groupId>
 			<artifactId>javaee-api</artifactId>
@@ -39,81 +37,78 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
-
-		<!-- spring dependency -->
-		
+		<!-- SPRING -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
 			<version>${spring.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
-		
-		
+
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
 
-		<!-- jstl -->
+		<!-- JSTL -->
 
 		<dependency>
 			<groupId>jstl</groupId>
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
 		</dependency>
-		
+
 		<!-- Spring Webflow -->
-		
 		<dependency>
-		<groupId>org.springframework.webflow</groupId>
-		<artifactId>spring-webflow</artifactId>
-		<version>2.4.4.RELEASE</version>
+			<groupId>org.springframework.webflow</groupId>
+			<artifactId>spring-webflow</artifactId>
+			<version>2.4.4.RELEASE</version>
 		</dependency>
-		
-		
+
 		<!-- Spring Security -->
 		<dependency>
-		<groupId>org.springframework.security</groupId>
-		<artifactId>spring-security-config</artifactId>
-		<version>${spring.security.version}</version>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+			<version>${spring.security.version}</version>
 		</dependency>
-		
+
 		<dependency>
-		<groupId>org.springframework.security</groupId>
-		<artifactId>spring-security-web</artifactId>
-		<version>${spring.security.version}</version>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+			<version>${spring.security.version}</version>
 		</dependency>
-		
+
 		<dependency>
-		<groupId>org.springframework.security</groupId>
-		<artifactId>spring-security-taglibs</artifactId>
-		<version>${spring.security.version}</version>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-taglibs</artifactId>
+			<version>${spring.security.version}</version>
 		</dependency>
-		
+
 		<dependency>
-		<groupId>commons-digester</groupId>	
-		<artifactId>commons-digester</artifactId>
-		<version>2.1</version>
+			<groupId>commons-digester</groupId>
+			<artifactId>commons-digester</artifactId>
+			<version>2.1</version>
 		</dependency>
-	
+
 	</dependencies>
 	<build>
-
 		<plugins>
-
 			<plugin>
-
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.1</version>
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
 				</configuration>
-
 			</plugin>
-
 		</plugins>
+
 		<finalName>onlineshopping</finalName>
 	</build>
 </project>
